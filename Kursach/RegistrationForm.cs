@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Kursach
 {
-    public partial class Form1 : Form
+    public partial class RegistrationForm : Form
     {
-        public Form1()
+        public RegistrationForm()
         {
             InitializeComponent();
         }
@@ -25,17 +25,25 @@ namespace Kursach
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {//162, 197, 35 лайм
-         
-            FormGradientPainter fgp = new FormGradientPainter();
-            Color color1 = Color.FromArgb(146, 99, 165);
-            Color color2 = Color.FromArgb(125, 159, 207);
-            Color color3 = Color.FromArgb(196, 231, 242);
-            fgp.CreateLinearGradient(this, color1, color2, color3, e);
+            try
+            {
+                FormGradientPainter fgp = new FormGradientPainter();
+                Color color1 = Color.FromArgb(146, 99, 165);
+                Color color2 = Color.FromArgb(125, 159, 207);
+                Color color3 = Color.FromArgb(196, 231, 242);
+                fgp.CreateLinearGradient(this, color1, color2, color3, e);
+            }
+            catch { }
         }
         protected override void OnResize(EventArgs e)
         {//позволяет нормально работать градиенту при изменении размера формы
-            base.OnResize(e);
-            this.Invalidate();
+            try
+            {
+                base.OnResize(e);
+                this.Invalidate();
+
+            }
+            catch { }
         }
 
 
