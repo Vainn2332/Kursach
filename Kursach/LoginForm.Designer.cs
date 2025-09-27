@@ -49,6 +49,7 @@
             this.Loginbutton.TabIndex = 12;
             this.Loginbutton.Text = "Войти";
             this.Loginbutton.UseVisualStyleBackColor = true;
+            this.Loginbutton.Click += new System.EventHandler(this.Loginbutton_Click);
             // 
             // PasswordtextBox
             // 
