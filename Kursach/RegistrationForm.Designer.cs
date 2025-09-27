@@ -34,6 +34,7 @@
             this.LogintextBox = new System.Windows.Forms.TextBox();
             this.PasswordtextBox = new System.Windows.Forms.TextBox();
             this.Registrationbutton = new System.Windows.Forms.Button();
+            this.ToAuthorisationlabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Registrationlabel
@@ -92,12 +93,30 @@
             // 
             this.Registrationbutton.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.Registrationbutton.FlatAppearance.BorderSize = 2;
+            this.Registrationbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Registrationbutton.Location = new System.Drawing.Point(241, 344);
             this.Registrationbutton.Name = "Registrationbutton";
             this.Registrationbutton.Size = new System.Drawing.Size(247, 88);
             this.Registrationbutton.TabIndex = 6;
             this.Registrationbutton.Text = "Зарегестрироваться";
             this.Registrationbutton.UseVisualStyleBackColor = true;
+            this.Registrationbutton.Click += new System.EventHandler(this.Registrationbutton_Click);
+            // 
+            // ToAuthorisationlabel
+            // 
+            this.ToAuthorisationlabel.AutoSize = true;
+            this.ToAuthorisationlabel.BackColor = System.Drawing.Color.Transparent;
+            this.ToAuthorisationlabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ToAuthorisationlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ToAuthorisationlabel.Location = new System.Drawing.Point(32, 366);
+            this.ToAuthorisationlabel.Name = "ToAuthorisationlabel";
+            this.ToAuthorisationlabel.Size = new System.Drawing.Size(118, 40);
+            this.ToAuthorisationlabel.TabIndex = 14;
+            this.ToAuthorisationlabel.Text = "Есть аккаунт?\r\nВойти";
+            this.ToAuthorisationlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ToAuthorisationlabel.Click += new System.EventHandler(this.ToAuthorisationlabel_Click);
+            this.ToAuthorisationlabel.MouseEnter += new System.EventHandler(this.ToAuthorisationlabel_MouseEnter);
+            this.ToAuthorisationlabel.MouseLeave += new System.EventHandler(this.ToAuthorisationlabel_MouseLeave);
             // 
             // RegistrationForm
             // 
@@ -105,6 +124,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(110)))), ((int)(((byte)(185)))));
             this.ClientSize = new System.Drawing.Size(732, 472);
+            this.Controls.Add(this.ToAuthorisationlabel);
             this.Controls.Add(this.Registrationbutton);
             this.Controls.Add(this.PasswordtextBox);
             this.Controls.Add(this.LogintextBox);
@@ -126,6 +146,7 @@
         private System.Windows.Forms.TextBox LogintextBox;
         private System.Windows.Forms.TextBox PasswordtextBox;
         private System.Windows.Forms.Button Registrationbutton;
+        private System.Windows.Forms.Label ToAuthorisationlabel;
     }
 }
 

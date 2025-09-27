@@ -27,11 +27,11 @@ namespace Kursach
         {//162, 197, 35 лайм
             try
             {
-                FormGradientPainter fgp = new FormGradientPainter();
-                Color color1 = Color.FromArgb(146, 99, 165);
-                Color color2 = Color.FromArgb(125, 159, 207);
-                Color color3 = Color.FromArgb(196, 231, 242);
-                fgp.CreateLinearGradient(this, color1, color2, color3, e);
+                FormGradientPainter formGradientPainter = new FormGradientPainter();
+                Color color1 = Color.FromArgb(122, 30, 51);
+                Color color2 = Color.FromArgb(215, 72, 92);
+                Color color3 = Color.FromArgb(248, 192, 200);
+                formGradientPainter.CreateLinearGradient(this, color1, color2, color3, e);
             }
             catch { }
         }
@@ -46,8 +46,29 @@ namespace Kursach
             catch { }
         }
 
+        private void Registrationbutton_Click(object sender, EventArgs e)
+        {
 
-        
+        }
+
+        private void ToAuthorisationlabel_MouseEnter(object sender, EventArgs e)
+        {
+            ToAuthorisationlabel.ForeColor = Color.Blue;
+
+        }
+
+        private void ToAuthorisationlabel_MouseLeave(object sender, EventArgs e)
+        {
+            ToAuthorisationlabel.ForeColor = Color.Black;
+
+        }
+
+        private void ToAuthorisationlabel_Click(object sender, EventArgs e)
+        {
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
+            this.Hide();
+        }
     }
 }
 

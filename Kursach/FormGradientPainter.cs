@@ -28,7 +28,7 @@ namespace Kursach
             LinearGradientBrush linearGradientBrush = new LinearGradientBrush(rect, colors[0], colors[4], LinearGradientMode.ForwardDiagonal);
             ColorBlend blend = new ColorBlend();
             blend.Colors = colors;
-            blend.Positions = new float[] { 0f, 0.2f, 0.5f, 0.92f, 1f };
+            blend.Positions = new float[] { 0f, 0.2f, 0.5f, 0.8f, 1f };
             linearGradientBrush.InterpolationColors = blend;
             e.Graphics.FillRectangle(linearGradientBrush, rect);
         }
