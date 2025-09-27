@@ -30,8 +30,12 @@ namespace Kursach
             Color color1 = Color.FromArgb(146, 99, 165);
             Color color2 = Color.FromArgb(125, 159, 207);
             Color color3 = Color.FromArgb(196, 231, 242);
-
             fgp.CreateLinearGradient(this, color1, color2, color3, e);
+        }
+        protected override void OnResize(EventArgs e)
+        {//позволяет нормально работать градиенту при изменении размера формы
+            base.OnResize(e);
+            this.Invalidate();
         }
 
 
