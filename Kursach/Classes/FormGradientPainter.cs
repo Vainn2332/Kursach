@@ -20,11 +20,10 @@ namespace Kursach
                  color1,
                  Color.FromArgb((color1.R+color2.R)/2,(color1.G+color2.G)/2,(color1.B+color2.B)/2),
                  color2,
-                 Color.FromArgb((color2.R+color3.R)/2,(color2.G+color3.G)/2,(color2.B+color3.B)/2),   // Промежуточные  
+                 Color.FromArgb((color2.R+color3.R)/2,(color2.G+color3.G)/2,(color2.B+color3.B)/2),   // Промежуточные цвета
                  color3
             };
             Rectangle rect = form.ClientRectangle;
-
             LinearGradientBrush linearGradientBrush = new LinearGradientBrush(rect, colors[0], colors[4], LinearGradientMode.ForwardDiagonal);
             ColorBlend blend = new ColorBlend();
             blend.Colors = colors;

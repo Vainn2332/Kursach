@@ -47,8 +47,29 @@ namespace Kursach
         }
 
         private void Registrationbutton_Click(object sender, EventArgs e)
-        {
-
+        {            
+            //проверяем корректность полей
+            //и проверяем есть ли такой пользователь в качестве администратора или пользователя
+            User user = new User(LogintextBox.Text, PasswordtextBox.Text);
+            UserValidator userValidator = new UserValidator();
+            if (userValidator.CheckValidation(user))
+            {
+                UserFileDB userFileDB = new UserFileDB();
+                if (userFileDB.ExistsByLogin(user))
+                {
+                    MessageBox.Show("Пользователь с таким Логином уже существует!");
+                    return;
+                }
+                else
+                {
+                    userFileDB.AddElement(user);
+                    MessageBox.Show("Регистрация прошла успешно!");          
+                    MainForm mf=new MainForm(user);
+                    mf.Show();
+                    this.Hide();
+                }
+            }
+            else MessageBox.Show("Некорректно введены поля!");       
         }
 
         private void ToAuthorisationlabel_MouseEnter(object sender, EventArgs e)
@@ -68,6 +89,11 @@ namespace Kursach
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
             this.Hide();
+        }
+
+        private void RegistrationForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

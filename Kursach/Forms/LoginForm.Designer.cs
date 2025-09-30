@@ -49,6 +49,7 @@
             this.Loginbutton.TabIndex = 12;
             this.Loginbutton.Text = "Войти";
             this.Loginbutton.UseVisualStyleBackColor = true;
+            this.Loginbutton.Click += new System.EventHandler(this.Loginbutton_Click);
             // 
             // PasswordtextBox
             // 
@@ -133,6 +134,7 @@
             this.Controls.Add(this.Authorisationlabel);
             this.Name = "LoginForm";
             this.Text = "LoginForm";
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.LoginForm_Paint);
             this.ResumeLayout(false);
             this.PerformLayout();
