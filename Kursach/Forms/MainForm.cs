@@ -39,9 +39,12 @@ namespace Kursach
         private void MainForm_Paint(object sender, PaintEventArgs e)
         {
             FormGradientPainter formGradientPainter = new FormGradientPainter();
-            Color color1 = Color.FromArgb();
-            .
-            formGradientPainter.CreateLinearGradient(this,);
+           // Color color1 = Color.FromArgb(208, 138, 97);
+            Color color1 = Color.FromArgb(194, 136, 64);
+
+            Color color2 = Color.FromArgb(244, 188, 122);
+            Color color3 = Color.FromArgb(255, 243, 214);            
+            formGradientPainter.CreateLinearGradient(this,color1,color2,color3,e);
         }
         protected override void OnResize(EventArgs e)
         {//позволяет нормально работать градиенту при изменении размера формы
