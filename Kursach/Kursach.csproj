@@ -74,6 +74,7 @@
     <Compile Include="Classes\User.cs" />
     <Compile Include="Classes\UserValidator.cs" />
     <Compile Include="Classes\Student.cs" />
+    <Compile Include="Classes\StudentFileDB.cs" />
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>

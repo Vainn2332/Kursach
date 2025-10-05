@@ -8,7 +8,6 @@ namespace Kursach
 {
     internal class UserValidator
     {
-        private char[] forbiddenSymbols = new char[] { };
         public bool CheckValidation(User user)
         {
             if(string.IsNullOrEmpty(user.Login)||string.IsNullOrEmpty(user.Password)) 

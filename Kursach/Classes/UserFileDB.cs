@@ -31,20 +31,10 @@ namespace Kursach
         }
         public bool Exists(IData data)
         {
-
             string[] fileLines = File.ReadAllLines(name);
             if (fileLines.Contains(data.GetData()))
                 return true;
             else return false;
-
-
-
-            /* string[] fileLines = File.ReadAllLines(name);
-             string[] tmp = data.GetData().Split(new char[] { '\t'});
-             string target = tmp[0] + '\t' + tmp[1];
-             if (fileLines.Contains(target))
-                 return true;
-             return false;*/
         }
         public void AddElement(IData data)
         {

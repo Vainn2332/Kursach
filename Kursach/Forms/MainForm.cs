@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Kursach
 {
@@ -28,7 +29,12 @@ namespace Kursach
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
-
+            StudentFileDB studentFileDB = new StudentFileDB();
+            if(!File.Exists(StudentFileDB.filename))
+            {
+                studentFileDB.CreateDB();
+            }
+           
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -39,9 +45,7 @@ namespace Kursach
         private void MainForm_Paint(object sender, PaintEventArgs e)
         {
             FormGradientPainter formGradientPainter = new FormGradientPainter();
-           // Color color1 = Color.FromArgb(208, 138, 97);
             Color color1 = Color.FromArgb(194, 136, 64);
-
             Color color2 = Color.FromArgb(244, 188, 122);
             Color color3 = Color.FromArgb(255, 243, 214);            
             formGradientPainter.CreateLinearGradient(this,color1,color2,color3,e);
@@ -52,7 +56,6 @@ namespace Kursach
             {
                 base.OnResize(e);
                 this.Invalidate();
-
             }
             catch { }
         }

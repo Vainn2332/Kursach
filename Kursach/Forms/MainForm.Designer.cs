@@ -30,10 +30,10 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fxbToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.создатьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.сохранитьКакToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.удалитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ыыва = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
@@ -62,29 +62,29 @@
             this.fxbToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.fxbToolStripMenuItem.Text = "Файл";
             // 
-            // cxToolStripMenuItem
-            // 
-            this.cxToolStripMenuItem.Name = "cxToolStripMenuItem";
-            this.cxToolStripMenuItem.Size = new System.Drawing.Size(31, 20);
-            this.cxToolStripMenuItem.Text = "cx";
-            // 
             // создатьToolStripMenuItem
             // 
             this.создатьToolStripMenuItem.Name = "создатьToolStripMenuItem";
-            this.создатьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.создатьToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.создатьToolStripMenuItem.Text = "Создать";
             // 
             // сохранитьКакToolStripMenuItem
             // 
             this.сохранитьКакToolStripMenuItem.Name = "сохранитьКакToolStripMenuItem";
-            this.сохранитьКакToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.сохранитьКакToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.сохранитьКакToolStripMenuItem.Text = "Сохранить как";
             // 
             // удалитьToolStripMenuItem
             // 
             this.удалитьToolStripMenuItem.Name = "удалитьToolStripMenuItem";
-            this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.удалитьToolStripMenuItem.Text = "Удалить";
+            // 
+            // cxToolStripMenuItem
+            // 
+            this.cxToolStripMenuItem.Name = "cxToolStripMenuItem";
+            this.cxToolStripMenuItem.Size = new System.Drawing.Size(31, 20);
+            this.cxToolStripMenuItem.Text = "cx";
             // 
             // dataGridView1
             // 

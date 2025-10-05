@@ -93,7 +93,7 @@ namespace Kursach
         {
             //создание и заполение БД пользователей 
             UserFileDB userDB = new UserFileDB();
-            if (File.Exists(UserFileDB.name))//////////////////////////////////////////////////////////
+            if (!File.Exists(UserFileDB.name))
             {
                 userDB.CreateDB();
                 var list = new StartUsers().GetStartUsers();

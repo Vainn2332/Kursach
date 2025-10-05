@@ -15,11 +15,13 @@ namespace Kursach
         void CreateDB();
         void DeleteElement(IData data);
         void AddElement(IData data);
+        bool Exists(IData data);
     }
 
-    
-    
 
-    
+
+
+
+
 
 }
