@@ -12,8 +12,8 @@ namespace Kursach
 {
     public partial class MainForm : Form
     {
-        User user;
-        Admin admin;
+        private  User user;
+        private Admin admin;
         public MainForm()
         {
             InitializeComponent();
@@ -34,6 +34,24 @@ namespace Kursach
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void MainForm_Paint(object sender, PaintEventArgs e)
+        {
+            FormGradientPainter formGradientPainter = new FormGradientPainter();
+            Color color1 = Color.FromArgb();
+            .
+            formGradientPainter.CreateLinearGradient(this,);
+        }
+        protected override void OnResize(EventArgs e)
+        {//позволяет нормально работать градиенту при изменении размера формы
+            try
+            {
+                base.OnResize(e);
+                this.Invalidate();
+
+            }
+            catch { }
         }
     }
 }

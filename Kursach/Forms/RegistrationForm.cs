@@ -65,8 +65,8 @@ namespace Kursach
                     userFileDB.AddElement(user);
                     MessageBox.Show("Регистрация прошла успешно!");          
                     MainForm mf=new MainForm(user);
-                    mf.Show();
                     this.Hide();
+                    mf.ShowDialog();
                 }
             }
             else MessageBox.Show("Некорректно введены поля!");       
